@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .st0 {
+            fill: #4c4c4c
+        }
+
+        i {
+            font-size: 1.2rem;
+        }
+
+        .center-link {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .center-link2 {
+            font-size: 16px;
+            color: #2196F3;
+        }
+
+        .center-link:hover,
+        .center-link2:hover {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .figure {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .figure img {
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .figure-caption {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            font-style: italic;
+            color: #8a8a8a;
+            margin-top: 8px;
+        }
+
+        .title {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-box,
+        .card-body-box,
+        .card-footer-box {
+            background: #fff;
+            border: 0px;
+        }
+
+        .card-title-box {
+            font-weight: 900;
+        }
+
+        .white-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner1,
+        .inner2,
+        .inner3 {
+            font-size: .875rem;
+            align-items: center;
+        }
+
+        .material-icons-check_circle,
+        .material-icons-device_hub,
+        .material-icons-people {
+            color: #00b900;
+            font-size: 1.4rem;
+        }
+
+        .pic-card,
+        .pic-body,
+        .pic-footer {
+            background: #fff;
+            border: 0px;
+        }
+
+        .pic-card {
+            box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+        }
+
+        .news-pic1 {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .news-pic1 img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .news-pic2 {
+            width: auto;
+        }
+
+        .news-pic2 img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .news-pic3 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .news-pic3 img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card-img {
+            width: 80%;
+            height: 100%;
+        }
+
+        .card-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .main-pic-reverse {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-pic-reverse img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .showcase {
+            background-image: url(https://unity.com/sites/default/files/styles/16_9_l_scale_width/public/pftg-showcase-1920x1080%401x.jpg?itok=H333yIDT);
+            width: auto;
+            height: 820px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .component-showcase-tile--selected,
+        .component-showcase-tile:hover {
+            background-color: #fff;
+            border: 3px solid #fff;
+            background-clip: padding-box;
+            -webkit-transition: background-color .4s, color .4s;
+            transition: background-color .4s, color .4s;
+        }
+
+
+        .showcase-box {
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px 20px;
+            height: 240px;
+        }
+
+        .beyond-footer {
+            background-image: url(https://unity.com/sites/default/files/styles/full_grid_width/public/enterprise-callout-2460x1200%402x.jpg?itok=eIGHy2OY);
+            width: auto;
+            height: 400px;
+            position: relative;
+            padding: 60px 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            color: #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .wel-box1 {
+            background: url(https://unity.com/sites/default/files/styles/16_9_m_no_transparency/public/2021-11/unityxweta-promo%20%281%29.jpg?itok=9IaPQ58c);
+            min-width: 65%;
+            height: 450px;
+            position: relative;
+            border-radius: 10px;
+            color: #fff;
+            background-size: cover;
+            margin-right: 3%;
+        }
+
+        .wel-box-right {
+            min-width: 30%;
+            height: 450px;
+            position: relative;
+            color: #fff;
+        }
+
+        .wel-box-2 {
+            background: url(https://unity.com/sites/default/files/styles/16_9_m_no_transparency/public/2021-06/Unite-Now-2020-Roundup-Blog-Post_Blog-header_V1_1280x720.jpg?itok=aPSmzNjv);
+            min-width: 30%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 10px;
+            color: #fff;
+            position: relative;
+            background-size: cover;
+            margin-bottom: 2%;
+        }
+
+        .wel-box-3 {
+            background: url(https://unity.com/sites/default/files/styles/16_9_m_no_transparency/public/2021-03/lts-tech-hero-unity%20%281%29.jpg?itok=AxrAnxnq);
+            min-width: 30%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 10px;
+            color: #fff;
+            position: relative;
+            background-size: cover;
+        }
+
+        .onecolumn {
+            width: 100%;
+            height: 700px;
+        }
+
+        .wel-box-column-1 {
+            background: url(https://unity.com/sites/default/files/styles/16_9_m_no_transparency/public/2021-11/unityxweta-promo%20%281%29.jpg?itok=9IaPQ58c);
+            width: auto;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            color: #fff;
+            position: relative;
+            background-size: cover;
+            margin-bottom: 4%;
+        }
+
+        .wel-box-column-2 {
+            background: url(https://unity.com/sites/default/files/styles/16_9_m_no_transparency/public/2021-06/Unite-Now-2020-Roundup-Blog-Post_Blog-header_V1_1280x720.jpg?itok=aPSmzNjv);
+            width: auto;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            color: #fff;
+            position: relative;
+            background-size: cover;
+            margin-bottom: 4%;
+        }
+
+        .wel-box-column-3 {
+            background: url(https://unity.com/sites/default/files/styles/16_9_m_no_transparency/public/2021-03/lts-tech-hero-unity%20%281%29.jpg?itok=AxrAnxnq);
+            width: auto;
+            height: 200px;
+            border-radius: 10px;
+            color: #fff;
+            position: relative;
+            background-size: cover;
+            margin-bottom: 4%;
+        }
+
+
+        .cls-1 {
+            fill: #fff;
+        }
+
+        .footer-icon svg {
+            height: 19px;
+            max-width: 18px;
+            opacity: .5;
+        }
+
+        .component-promotion-large__data {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            padding: 0 24px 24px;
+        }
+
+
+        .cookie {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            left: 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        .svg {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="row pt-4">
+                <div class="logo">
+                    <svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 130.5 48"
+                        xml:space="preserve" width="87" height="32">
+                        <path
+                            d="M53.7 26.1V12.5h5.7v13.8c0 2.3 1.2 3.8 4 3.8 2.6 0 3.9-1.6 3.9-3.9V12.5H73v13.6c0 5.3-3.2 8.5-9.6 8.5-6.5.1-9.7-3.1-9.7-8.5zM75.6 17.7h5.1V20h.1c1.2-1.8 2.8-2.7 5.1-2.7 3.6 0 5.7 2.6 5.7 6.3v10.7h-5.3v-9.7c0-1.7-.9-2.9-2.6-2.9-1.7 0-2.9 1.5-2.9 3.5v9.1h-5.3V17.7zM94.3 11.2h5.3v4.3h-5.3v-4.3zm0 6.5h5.3v16.5h-5.3V17.7zM103.7 29.9V22h-2.2v-4.3h2.2v-5.2h5.1v5.2h3V22h-3v6.8c0 1.3.7 1.6 1.8 1.6h1.2v3.8c-.5.1-1.5.3-2.9.3-3 0-5.2-1-5.2-4.6zM115.1 35.6h1.8c1.5 0 2.2-.6 2.2-1.7 0-.7-.3-1.7-1-3.4l-4.9-12.7h5.5l2.2 7c.5 1.6 1 3.8 1 3.8h.1s.5-2.2 1-3.8l2.2-7h5.3l-5.7 16.7c-1.3 3.9-2.9 5.2-6.2 5.2h-3.4l-.1-4.1z">
+                        </path>
+                        <path class="st0"
+                            d="M42.5 33.6V11.2L23.1 0v8.6l7.6 4.4c.3.2.3.6 0 .7l-9 5.2c-.3.2-.6.1-.8 0l-9-5.2c-.3-.1-.3-.6 0-.7l7.6-4.4V0L0 11.2v22.4-.1.1l7.4-4.3v-8.8c0-.3.4-.5.6-.4l9 5.2c.3.2.4.4.4.7v10.4c0 .3-.4.5-.6.4l-7.6-4.4-7.4 4.3L21.2 48l19.4-11.2-7.4-4.3-7.6 4.4c-.3.2-.6 0-.6-.4V26.1c0-.3.2-.6.4-.7l9-5.2c.3-.2.6 0 .6.4v8.8l7.5 4.2z">
+                        </path>
+                        <path
+                            d="M21.2 48l19.4-11.2-7.4-4.3-7.6 4.4c-.3.2-.6 0-.6-.4V26.1c0-.3.2-.6.4-.7l9-5.2c.3-.2.6 0 .6.4v8.8l7.4 4.3V11.2L21.2 23.5V48z">
+                        </path>
+                        <path
+                            d="M23.1 0v8.6l7.6 4.4c.3.2.3.6 0 .7l-9 5.2c-.3.2-.6.1-.8 0l-9-5.2c-.3-.1-.3-.6 0-.7l7.6-4.4V0L0 11.2l21.2 12.3 21.2-12.3L23.1 0z"
+                            fill="gray"></path>
+                        <path class="st0"
+                            d="M16.9 36.9l-7.6-4.4-7.4 4.3L21.3 48V23.5L0 11.2v22.4-.1.1l7.4-4.3v-8.8c0-.3.4-.5.6-.4l9 5.2c.3.2.4.4.4.7v10.4c.1.4-.2.7-.5.5z">
+                        </path>
+                    </svg>
+                </div>
+
+                <!-- mobile-list-btn -->
+                <div class="mobile-list d-block d-md-none d-flex align-items-center ml-3 mr-auto">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <!-- / -->
+
+                <!-- nav-link-area -->
+                <div class="nav-link-area d-none d-md-block mr-auto">
+                    <ul class="list-unstyled d-flex pt-1">
+                        <li class="mr-3 ml-4">
+                            <a class="center-link" href="">產品</a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="center-link2" href="">解決方案</a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="center-link" href="">學習</a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="center-link" href="">支持和服務</a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="center-link" href="">社區</a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="center-link" href="">開發者工具</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- / -->
+
+                <!-- trial-btn -->
+                <div class="trial-btn d-none d-md-block">
+                    <button type="button" class="btn btn-primary">開始使用</button>
+                </div>
+                <!-- / -->
+
+                <!-- nav-login-area -->
+                <div class="nav-login-area d-flex align-items-center">
+                    <ul class="list-unstyled d-flex align-items-center my-auto">
+                        <li class="ml-4">
+                            <a class="text-dark" href=""><i class="fas fa-search"></i></a>
+                        </li>
+                        <li class="ml-3">
+                            <a class="text-dark" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"
+                                        fill="currentColor"></path>
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="ml-3">
+                            <a class="text-dark" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                                        fill="currentColor"></path>
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                </svg></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- / -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row pt-5">
+            <div class="main-pic col-12 col-md-6">
+                <figure class="figure">
+                    <img src="https://unity.com/sites/default/files/styles/16_9_s_scale_width/public/2021-11/unity-every-industry.jpg?itok=gLximVlN"
+                        class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption">Subnautica: Below Zero — Unknown Worlds; Volvo XC40, courtesy
+                        of Varjo</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-md-6 flex-column align-self-md-center">
+                <div class="col-12 pb-2 pb-md-0">
+                    <H1>Unity Gaming Services 隆重登場</H1>
+                    <p>一個統一的平台，提供靈活的解決方案，幫助您構建、管理和拓展您的遊戲。</p>
+                </div>
+                <div class="col-12 pb-3 pb-md-0">
+                    <button class="btn btn-lg btn-primary d-none d-md-block">開始使用</button>
+                    <button class="btn btn-lg btn-primary d-block d-md-none btn-block">開始使用</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-md-5">
+        <div class="row">
+            <div class="card-group pt-md-3 pb-md-5">
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">遊戲</h5>
+                        <p class="card-text">您創建和運營遊戲所需的一切。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a href="https://unity.com/cn/solutions/game">了解詳情</a>
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">汽車、運輸與製造</h5>
+                        <p class="card-text">運用實時3D技術在快速變化的行業局勢中奪得競爭優勢。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a href="https://unity.com/cn/solutions/automotive-transportation-manufacturing">了解詳情</a>
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">電影與動畫</h5>
+                        <p class="card-text">為電影和動畫項目提供前所未有的藝術創作自由與更快的製作速度。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a href="https://unity.com/cn/solutions/film-animation-cinematics">了解詳情</a>
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">建築、工程與施工</h5>
+                        <p class="card-text">為大規模的現實生活應用情形創建沉浸式3D模型體驗。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a href="https://unity.com/cn/solutions/architecture-engineering-construction">了解詳情</a>
+                    </div>
+                    <div class="border d-block d-md-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mt-md-0 mb-5" style="background-color: #d6d6d67a;">
+        <div class="d-flex flex-column flex-md-row justify-content-md-between">
+            <div class="inner1 d-flex py-3 py-md-2">
+                <div class="white-circle">
+                    <span class="material-icons material-icons-check_circle">
+                        check_circle
+                    </span>
+                </div>&nbsp;<b>免版稅</b>&nbsp;-&nbsp;收入全歸您
+            </div>
+            <div class="inner2 d-flex py-3 py-md-2">
+                <div class="white-circle">
+                    <span class="material-icons material-icons-device_hub">
+                        device_hub
+                    </span>
+                </div>&nbsp;<b>有&nbsp;20&nbsp;多個不同平台</b>在運行&nbsp;Unity&nbsp;作品
+            </div>
+            <div class="inner3 d-flex py-3 py-md-2">
+                <div class="white-circle">
+                    <span class="material-icons material-icons-people">
+                        people
+                    </span>
+                </div>&nbsp;受&nbsp;<b>150&nbsp;萬越活躍創作者</b>信賴
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-5 pt-md-0 pb-md-5 mb-md-5">
+        <H1 class="pb-3 mb-3 mb-md-0">精選產品</H1>
+        <div class="card-deck mt-md-3">
+            <div class="card pic-card">
+                <img src="https://unity.com/sites/default/files/styles/cards_16_9/public/2021-08/unity-pro-card.jpeg.jpg?itok=TeJ3l-by"
+                    class="card-img-top" alt="...">
+                <div class="card-body pic-body">
+                    <h5 class="card-title">Unity Pro</h5>
+                    <p class="card-text">為專業人士提供完整的創建和運營實時 3D 體驗解決方案。將功能強大的生態系統（包含工具、支持和社區）交到您的團隊手中，讓您更快地取得更好的結果。</p>
+                </div>
+                <div class="card-footer pic-footer">
+                    <a
+                        href="https://store.unity.com/cn/configure-plan/unity-pro?_ga=2.166021559.808507273.1638370945-1276607481.1625852889">訂閱
+                    </a>
+                    <a class="ml-3"
+                        href="https://store.unity.com/cn/products/unity-pro?_ga=2.131293830.808507273.1638370945-1276607481.1625852889">了解詳情
+                    </a>
+                </div>
+            </div>
+            <div class="card pic-card">
+                <img src="https://unity.com/sites/default/files/styles/cards_16_9/public/2021-10/1%20%281%29.jpg?itok=DwwOhJm4"
+                    class="card-img-top" alt="...">
+                <div class="card-body pic-body">
+                    <h5 class="card-title">Unity Gaming Services</h5>
+                    <p class="card-text">無論您處於開發生命週期的哪個階段，Unity Gaming Services
+                        都能將您的遊戲提升到一個新的水平。將您的願景變為現實，並利用我們的工具運行您的在線遊戲、增加收入、挖掘玩家見解等。</p>
+                </div>
+                <div class="card-footer pic-footer">
+                    <a href="https://unity.com/cn/solutions/gaming-services">開始使用</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3 mt-md-0 pt-5 pt-md-4">
+        <div class="pb-4">
+            <H1>助您獲得成功的一切</H1>
+        </div>
+        <div class="col-md-8 pl-md-1 pb-md-4">
+            <p>Unity不僅僅是世界上最好的實時開發平台 – 它還是一個可以幫助您獲得成功的強大生態系統。加入我們充滿活力的創作者社區，了解您如何才能實現自己的願望。</p>
+        </div>
+        <div class="pb-md-4">
+            <button class="btn btn-lg btn-primary">閱讀我們的博客</button>
+        </div>
+        <div class="row pb-5 mb-5">
+            <div class="card-group">
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">Unity Learn</h5>
+                        <p class="card-text">通過現場會議和專為各種技能水平的創作者設計的超過 750 個小時的按需學習內容來提高 Unity 技能。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a
+                            href="https://learn.unity.com/?_ga=2.220556945.808507273.1638370945-1276607481.1625852889">開始學習</a>
+                    </div>
+                </div>
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">Asset Store資源商店</h5>
+                        <p class="card-text">利用不斷增加的各種免費或付費資源和工具迅速啟動您的項目，以更快的速度實現成功。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a
+                            href="https://assetstore.unity.com/?_ga=2.220556945.808507273.1638370945-1276607481.1625852889">更多訊息</a>
+                    </div>
+                </div>
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">文檔</h5>
+                        <p class="card-text">閱讀我們全面有序的文檔，迅速了解Unity的功能和工作流，學習如何創建和使用各種腳本。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a
+                            href="https://docs.unity3d.com/Manual/index.html?_ga=2.220556945.808507273.1638370945-1276607481.1625852889">更多訊息</a>
+                    </div>
+                </div>
+                <div class="card card-box">
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title card-title-box">遊戲服務</h5>
+                        <p class="card-text">你構建、管理和拓展遊戲業務所需的一切。在開發生命週期的每個階段，利用久經考驗的服務將你的遊戲提升到新的水平。</p>
+                    </div>
+                    <div class="card-footer card-footer-box">
+                        <a href="https://unity.com/cn/solutions/gaming-services">更多訊息</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container d-none d-md-block">
+        <h1>Unity最新動態</h1>
+        <div class="row">
+            <div class="wel-box1 col-md-8 col-12">
+                <h2 class=" wel-box1-title " style="position: absolute; bottom: 20%;left:10%;">Welcome Weta Digital!
+                </h2>
+                <div class=" wel-box1-content " style="position: absolute; bottom: 8%;left: 10%; right:10%;">
+                    <p>Bringing highly sophisticated VFX tools to millions of creators around the world.</p>
+                </div>
+            </div>
+            <div class="wel-box-right flex-column">
+                <div class="wel-box-2">
+                    <div class="wel-box-2">
+                        <h4 class=" wel-box2-title " style="position: absolute; bottom: 30%;left:5%;">適用於所有 Unity Pro 和
+                            Enterprise 訂閱用戶</h4>
+                        <div class=" wel-box2-content " style="position: absolute; bottom: 5%;left: 5%; right:10%;">
+                            <p>訪問新的 Unity 成功中心，以獲取有用的提示和最佳實踐。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wel-box-3">
+                    <div class="wel-box-3">
+                        <h4 class=" wel-box3-title " style="position: absolute; bottom: 30%;left:5%;">Unity 的最新版本</h4>
+                        <div class=" wel-box3-content " style="position: absolute; bottom: 5%;left: 5%; right:10%;">
+                            <p>Unity 2020 LTS and Unity 2021.2 Tech Stream are now available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-block d-md-none">
+        <h1>Unity最新動態</h1>
+        <div class="onecolumn d-flex flex-column">
+            <div class="wel-box-column-1">
+                <h4 class=" wel-box1-title " style="position: absolute; bottom: 30%;left:10%;">Welcome Weta Digital!
+                </h4>
+                <div class=" wel-box1-content " style="position: absolute; bottom: 0;left: 10%; right:10%;">
+                    <p>Bringing highly sophisticated VFX tools to millions of creators around the world.</p>
+                </div>
+            </div>
+            <div class="wel-box-column-2">
+                <h5 class=" wel-box2-title " style="position: absolute; bottom: 30%;left:5%;">適用於所有 Unity Pro 和
+                    Enterprise 訂閱用戶</h5>
+                <div class=" wel-box2-content " style="position: absolute; bottom: 0;left: 5%; right:10%;">
+                    <p>訪問新的 Unity 成功中心，以獲取有用的提示和最佳實踐。</p>
+                </div>
+            </div>
+            <div class="wel-box-column-3">
+                <h5 class=" wel-box3-title " style="position: absolute; bottom: 30%;left:5%;">Unity 的最新版本</h5>
+                <div class=" wel-box3-content " style="position: absolute; bottom:0;left: 5%; right:10%;">
+                    <p>Unity 2020 LTS and Unity 2021.2 Tech Stream are now available</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container my-md-5">
+        <div class="row">
+            <div class="card-group d-flex">
+                <div class="card-box d-flex col-md-4">
+                    <div class="card-img d-none d-md-flex">
+                        <img src="https://unity.com/sites/default/files/styles/promotion_compact/public/2021-11/%7B4cecf49d-8994-4825-959c-94482c411d75%7D_%7B2c8cae08-e688-4cfd-ac71-6e1daaca20e9%7D_Immersive-training-for-plants-and-job-sites_1280x720%20%281%29_0.jpg?h=39b94f55&itok=mDiNFQKY"
+                            alt="">
+                    </div>
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title" style="font-size: 14px;">Industrial Success Hub</h5>
+                        <p class="card-text" style="font-size: 12px;">Your Unity Industrial journey begins here</p>
+                    </div>
+                </div>
+                <div class="card-box d-flex col-md-4">
+                    <div class="card-img d-none d-md-flex" style="min-width: 50%;">
+                        <img src="https://unity.com/sites/default/files/styles/promotion_compact/public/2021-11/mm-homepage-banner-810x455.jpg?h=de8c8e61&itok=HxmvN-vx"
+                            alt="">
+                    </div>
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title" style="font-size: 14px;">More momentum</h5>
+                        <p class="card-text" style="font-size: 12px;">Get more momentum on your next project with
+                            Unity’s full suite of DevOps
+                            tools.</p>
+                    </div>
+                </div>
+                <div class="card-box d-flex col-md-4">
+                    <div class="card-img d-none d-md-flex">
+                        <img src="https://unity.com/sites/default/files/styles/promotion_compact/public/2020-08/udp-blog-header.jpg?h=c673cd1c&itok=EZk_URS1"
+                            alt="">
+                    </div>
+                    <div class="card-body card-body-box">
+                        <h5 class="card-title" style="font-size: 14px;">Unity 分發平台</h5>
+                        <p class="card-text" style="font-size: 12px;">從單一中心向全球分發你的 Android 遊戲。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="showcase pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="component-showcase__title h1 text-white pt-md-5 pb-2">Made with Unity</div>
+                    <div class="component-showcase__description text-white pb-4">
+                        <p>閱讀創作者們令人振奮的故事，看他們如何利用Unity實現自己的項目。</p>
+                    </div>
+                    <button type="button" class="btn btn-primary">更多故事</button>
+                </div>
+            </div>
+        </div>
+        <div class="component-showcase-tiles">
+            <div class="container pt-5 mt-5">
+                <div class="row component-showcase-tiles__expanded pt-5 mt-5">
+                    <div class="component-showcase-tiles__item col-md-4">
+                        <div class="component-showcase-tile-inner showcase-box">
+                            <h3 class="component-showcase-tile__title h5">
+                                <div>Praey for the Gods</div>
+                            </h3>
+                            <small class="component-showcase-tile__byline">
+                                <div>作者：No Matter Studios</div>
+                            </small>
+                            <div class="component-showcase-tile__summary pt-3 pb-5">
+                                <div>出自一個才華橫溢的小工作室團隊之手的寒冬生存遊戲巨制。</div>
+                            </div>
+                            <div class="component-showcase-tile__link">
+                                <a href="">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-showcase-tiles__item col-md-4 d-none d-md-block">
+                        <div class="component-showcase-tile-inner showcase-box">
+                            <h3 class="component-showcase-tile__title h5">
+                                <div>Pharos AR</div>
+                            </h3>
+                            <small class="component-showcase-tile__byline">
+                                <div>作者：Childish Gambino、Wolf + Rothstein和MediaMonks</div>
+                            </small>
+                            <div class="component-showcase-tile__summary pt-3 pb-4">
+                                <div>进入 Childish Gambino 的神秘世界，感受全球首個多平台、多玩家 AR 音樂體驗。</div>
+                            </div>
+                            <div class="component-showcase-tile__link">
+                                <a href="">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-showcase-tiles__item col-md-4 d-none d-md-block">
+                        <div class="component-showcase-tile-inner showcase-box">
+                            <h3 class="component-showcase-tile__title h5">
+                                <div>如何利用Unity HDRP創造可配置的汽車</div>
+                            </h3>
+                            <small class="component-showcase-tile__byline pt-3 pb-5">
+                                <div>作者：Edward Martin</div>
+                            </small>
+                            <div class="component-showcase-tile__summary pb-5 mb-2">
+                                <div>汽車實時渲染內部揭秘。</div>
+                            </div>
+                            <div class="component-showcase-tile__link">
+                                <a href="">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-md-5 mb-md-5 mt-3 mt-md-0">
+        <div class="row pt-md-5 pb-md-5 mb-md-5">
+            <div class="main-pic-reverse col-12 col-md-6 d-block d-md-none">
+                <img src="https://unity.com/sites/default/files/styles/16_9_s_scale_width/public/recruiting-10_12-1020x574%402x%20.jpg?itok=A8TbLRR4"
+                    alt="...">
+            </div>
+            <div class="col-12 col-md-6 flex-column align-self-center">
+                <div class="col-12">
+                    <H1>攜手助力全球實時創造力</H1>
+                    <p>加入我們的全球團隊，共同打造強大的世界級實時開發平台。</p>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-lg btn-primary">我們正在招聘！</button>
+                </div>
+            </div>
+            <div class="main-pic-reverse col-12 col-md-6 d-none d-md-block">
+                <img src="https://unity.com/sites/default/files/styles/16_9_s_scale_width/public/recruiting-10_12-1020x574%402x%20.jpg?itok=A8TbLRR4"
+                    alt="...">
+            </div>
+        </div>
+        <div class="container flex-column py-md-5 ">
+            <div>
+                <H1>呈現無限可能</H1>
+            </div>
+            <div>
+                <p>一次構建，即可部署到逾 25 種領先平台和技術，覆蓋盡可能多的受眾。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/ios-logo.png?itok=55aeCPC1"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/android_1.png?itok=1aYZU4Er"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/windows.png?itok=8cqthbLh"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/universalwindowsplatform.png?itok=8wuC2MUy"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/linux.png?itok=c8d_GwRs"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/webgl.png?itok=lsHpcgD7"
+                    alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/ps4-logo.png?itok=CdHQZbl_"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-10/sony-ps5-sponsor-360x192%401x.jpg?itok=gFdGAkuw"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-03/xboxone.png?itok=yBPY4q1-"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-10/xbox-series-x-s-sponsor-360x192%401x.jpg?itok=DNvsv69Q"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/oculus-rift-logo.png?itok=6yrzWECa"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/androidtv_0.png?itok=T_x1CmxO"
+                    alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="logo-img col-6 col-md-2 my-3 mb-5">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/tvos.png?itok=gHGJNFgh"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3 mb-5">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/nintendoswitch.png?itok=hpWGp8VQ"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3 mb-5">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/nintendoswitch.png?itok=hpWGp8VQ"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3 mb-5">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/stadia.png?itok=P3mDfUrl"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3 mb-5">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/microsofthololens.png?itok=LgfYgRbV"
+                    alt="">
+            </div>
+            <div class="logo-img col-6 col-md-2 my-3 mb-5">
+                <img src="https://unity.com/sites/default/files/styles/sponsor/public/2020-02/magic-leap.png?itok=orMAhBK2"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container beyond-footer mb-5 d-flex" ;>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-10 ml-md-5">
+                <h2 class="beyond-footer-title ">
+                    <div>幫助大型團隊實現偉大夢想的解決方案</div>
+                </h2>
+                <div class="beyond-footer-content">
+                    <div>
+                        <p>我們的企業級解決方案為各個行業的大型團隊和組織提供了他們需要的所有功能，幫助他們打造出色的實時3D項目。</p>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary d-none d-md-block">詳情諮詢</button>
+                <button type="button" class="btn btn-primary btn-block d-block d-md-none">詳情諮詢</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-5" style="background-color: #000;">
+        <div class="container-fluid">
+            <div class="row px-3 pb-4" style="border-bottom: 1px solid #fff;">
+                <div class="col-12 col-md-6">
+                    <h5 class="text-white">語言</h5>
+                    <div class="footer-upper-left d-flex">
+                        <div class="mr-4">
+                            <ul class="list-unstyled">
+                                <li><a class="text-muted" href="#">English</a></li>
+                                <li><a class="text-muted" href="#">中文</a></li>
+                                <li><a class="text-muted" href="#">Deutsche</a></li>
+                            </ul>
+                        </div>
+                        <div class="mr-4">
+                            <ul class="list-unstyled">
+                                <li><a class="text-muted" href="#">Español</a></li>
+                                <li><a class="text-muted" href="#">日本語</a></li>
+                                <li><a class="text-muted" href="#">Русский</a></li>
+                            </ul>
+                        </div>
+                        <div class="mr-4">
+                            <ul class="list-unstyled">
+                                <li><a class="text-muted" href="#">Français</a></li>
+                                <li><a class="text-muted" href="#">한국어</a></li>
+                                <li><a class="text-muted" href="#">Português</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h5 class="text-white">社交媒體</h5>
+                    <div class="footer-upper-right d-flex">
+                        <div class="footer-icon mr-3">
+                            <a class="text-muted" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24">
+                                    <title>YouTube</title>
+                                    <title>social-youtube</title>
+                                    <path class="cls-1"
+                                        d="M4.65,0H6.09l1,3.7L8,0H9.45L7.78,5.51V9.26H6.35V5.51Zm6.6,2.37A1.75,1.75,0,0,0,9.39,4.21V7.56a1.64,1.64,0,0,0,1.86,1.83,1.73,1.73,0,0,0,1.82-1.83V4.21A1.78,1.78,0,0,0,11.25,2.37Zm.53,5.13c0,.37-.19.65-.53.65a.58.58,0,0,1-.56-.65V4.32c0-.37.17-.65.53-.65s.56.27.56.65Zm4.73-5.07V7.62c-.16.19-.5.51-.75.51s-.34-.19-.34-.46V2.43H14.15V8.14c0,.67.21,1.22.89,1.22a2,2,0,0,0,1.47-.85v.75h1.27V2.43Zm2.2,13.86c-.45,0-.54.31-.54.76v.66h1.07v-.66C19.24,16.61,19.15,16.29,18.71,16.29Zm-4.7,0a.76.76,0,0,0-.25.2v4a1,1,0,0,0,.28.23.51.51,0,0,0,.62-.07.74.74,0,0,0,.11-.45V16.94a.85.85,0,0,0-.13-.5A.49.49,0,0,0,14,16.33Zm4.82-5.2c-2.6-.17-11.06-.17-13.66,0C2.35,11.33,2,13,2,17.5s.35,6.18,3.17,6.37c2.6.17,11.06.17,13.66,0C21.65,23.68,22,22,22,17.5S21.65,11.33,18.83,11.13ZM6.51,21.82H5.15V14.28H3.74V13H7.92v1.28H6.51v7.54Zm4.84,0H10.14V21.1a2.57,2.57,0,0,1-.69.61c-.65.37-1.55.36-1.55-1V15.31H9.11v5c0,.26.06.44.32.44a1.2,1.2,0,0,0,.71-.49V15.31h1.21v6.51ZM16,20.47c0,.81-.3,1.43-1.1,1.43a1.37,1.37,0,0,1-1.15-.58v.5H12.54V13h1.22v2.84a1.45,1.45,0,0,1,1.07-.61c.89,0,1.18.75,1.18,1.63v3.61Zm4.47-1.75H18.17V20c0,.49,0,.91.53.91s.54-.35.54-.91V19.5h1.24V20c0,1.26-.53,2-1.81,2s-1.75-.84-1.75-2V17.06a1.79,1.79,0,0,1,1.84-1.91c1.16,0,1.72.74,1.72,1.91v1.66Z"
+                                        transform="translate(-2)"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-icon mr-3">
+                            <a class="text-muted" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23">
+                                    <title>LinkedIn</title>
+                                    <title>social-linkedin</title>
+                                    <path class="cls-1"
+                                        d="M5,3.5A2.48,2.48,0,1,1,2.5,1,2.49,2.49,0,0,1,5,3.5ZM5,8H0V24H5Zm8,0H8V24h5V15.6c0-4.67,6-5,6,0V24h5V13.87C24,6,15.08,6.28,13,10.16Z"
+                                        transform="translate(0 -1)"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-icon mr-3">
+                            <a class="text-muted" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 19.5">
+                                    <title>Twitter</title>
+                                    <title>social-twitter</title>
+                                    <path class="cls-1"
+                                        d="M24,4.56a9.87,9.87,0,0,1-2.83.77,4.94,4.94,0,0,0,2.17-2.72A10,10,0,0,1,20.21,3.8a4.93,4.93,0,0,0-8.39,4.49A14,14,0,0,1,1.67,3.15,4.93,4.93,0,0,0,3.19,9.72,4.79,4.79,0,0,1,1,9.11,4.93,4.93,0,0,0,4.91,14a4.86,4.86,0,0,1-2.22.08,4.92,4.92,0,0,0,4.6,3.42,9.91,9.91,0,0,1-7.29,2,13.92,13.92,0,0,0,7.55,2.21,13.92,13.92,0,0,0,14-14.64A10.1,10.1,0,0,0,24,4.56Z"
+                                        transform="translate(0 -2.25)"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-icon mr-3">
+                            <a class="text-muted" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 24">
+                                    <title>Facebook</title>
+                                    <title>social-facebook</title>
+                                    <path class="cls-1"
+                                        d="M9,8H6v4H9V24h5V12h3.64L18,8H14V6.33c0-1,.19-1.33,1.11-1.33H18V0H14.19C10.6,0,9,1.58,9,4.61Z"
+                                        transform="translate(-6)"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-icon mr-3">
+                            <a class="text-muted" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <title>Instagram</title>
+                                    <title>social-instagram</title>
+                                    <path class="cls-1"
+                                        d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.59-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.64.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.35.2-6.78,2.62-7,7C0,8.33,0,8.74,0,12S0,15.67.07,17c.2,4.36,2.62,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.35-.2,6.78-2.62,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.35-2.62-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.43,1.44A1.44,1.44,0,0,0,18.41,4.15Z"
+                                        transform="translate(0)"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-3 pt-4">
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">購買</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">商品</a></li>
+                        <li class="mb-4"><a class="text-muted" href="#">Unity Ads</a></li>
+                        <li><a class="text-muted" href="#">訂閱</a></li>
+                        <li><a class="text-muted" href="#">Asset Store資源商店</a></li>
+                        <li><a class="text-muted" href="#">經銷商</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">教育</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">學生</a></li>
+                        <li><a class="text-muted" href="#">教師</a></li>
+                        <li><a class="text-muted" href="#">認證</a></li>
+                        <li><a class="text-muted" href="#">學習</a></li>
+                        <li><a class="text-muted" href="#">卓越中心</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">下載</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">獲取 Unity</a></li>
+                        <li><a class="text-muted" href="#">下載存檔</a></li>
+                        <li><a class="text-muted" href="#">Beta 計劃</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">Unity Labs實驗室</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">實驗室</a></li>
+                        <li><a class="text-muted" href="#">作品</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">資源</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">學習平台</a></li>
+                        <li><a class="text-muted" href="#">社區</a></li>
+                        <li><a class="text-muted" href="#">文檔</a></li>
+                        <li><a class="text-muted" href="#">Unity QA</a></li>
+                        <li><a class="text-muted" href="#">常見問題</a></li>
+                        <li><a class="text-muted" href="#">服務狀態</a></li>
+                        <li><a class="text-muted" href="#">案例分析</a></li>
+                        <li><a class="text-muted" href="#">Made with Unity</a></li>
+                        <li><a class="text-muted" href="#">Industrial Success Hub</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">資源</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">我們公司</a></li>
+                        <li><a class="text-muted" href="#">Brand</a></li>
+                        <li><a class="text-muted" href="#">新聞簡報</a></li>
+                        <li><a class="text-muted" href="#">博客</a></li>
+                        <li><a class="text-muted" href="#">活動</a></li>
+                        <li><a class="text-muted" href="#">工作機會</a></li>
+                        <li><a class="text-muted" href="#">幫助</a></li>
+                        <li><a class="text-muted" href="#">媒體</a></li>
+                        <li><a class="text-muted" href="#">合作夥伴</a></li>
+                        <li><a class="text-muted" href="#">投資人</a></li>
+                        <li><a class="text-muted" href="#">聯盟計劃</a></li>
+                        <li><a class="text-muted" href="#">安全性</a></li>
+                        <li><a class="text-muted" href="#">社會影響力</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-column col-md-6">
+                <div class="text-white">Copyright © 2021 Unity Technologies</div>
+                <div>
+                    <a class="mr-2 text-muted" href="">法律訊息</a>
+                    <a class="mr-2 text-muted" href="">隱私政策</a>
+                    <a class="mr-2 text-muted" href="">Cookie</a>
+                    <a class="mr-2 text-muted" href="">不要出售我的個人訊息</a>
+                    <a class="text-muted" href="">Cookie設置</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3 text-white">
+                “Unity”、Unity 徽標及其他 Unity 商標是 Unity Technologies 或其在美國和其他地區的分支機構的商標或註冊商標（單擊此處獲取更多信息）。其他名稱或品牌是其各自所有者的商標。
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="cookie">
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M14.588 0l.445.328c1.807 1.303 3.961 2.533 6.461 3.688 2.015.93 4.576 1.746 7.682 2.446 0 14.178-4.73 24.133-14.19 29.864l-.398.236C4.863 30.87 0 20.837 0 6.462c3.107-.7 5.668-1.516 7.682-2.446 2.709-1.251 5.01-2.59 6.906-4.016zm5.87 13.88a.75.75 0 00-.974.159l-5.475 6.625-3.005-2.997-.077-.067a.75.75 0 00-.983 1.13l4.172 4.16 6.525-7.895.06-.083a.75.75 0 00-.16-.973z"
+                fill="#000" fill-rule="evenodd"></path>
+        </svg>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
