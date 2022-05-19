@@ -30,19 +30,19 @@
 }
 
 .navbar a:link {
-  color: #292929;
+  color: #494949;
 }
 
 .navbar a:visited {
-  color: #292929;
+  color: #494949;
 }
 
 .navbar a:hover {
-  color: #292929;
+  color: #494949;
 }
 
 .navbar a:active {
-  color: #292929;
+  color: #494949;
 }
 
 @media (min-width: 1199px) {
@@ -86,19 +86,19 @@
 }
 
 .search a:link {
-  color: #292929;
+  color: #494949;
 }
 
 .search a:visited {
-  color: #292929;
+  color: #494949;
 }
 
 .search a:hover {
-  color: #292929;
+  color: #494949;
 }
 
 .search a:active {
-  color: #292929;
+  color: #494949;
 }
 
 @media (min-width: 1199px) {
@@ -269,7 +269,8 @@
   height: auto;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -426,7 +427,7 @@ span {
   font-size: 14px;
   word-break: break-word;
   word-wrap: break-word;
-  color: #292929;
+  color: #494949;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -445,5 +446,157 @@ span {
   span {
     font-size: 16px;
   }
+}
+
+footer {
+  width: 80%;
+  margin: 0 10%;
+}
+
+footer .footer-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-all .footer-area {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-all .footer-area h2 {
+  font-size: 16px;
+}
+
+footer .footer-all .footer-area a:link {
+  color: #494949;
+  text-decoration: none;
+}
+
+footer .footer-all .footer-area a:visited {
+  color: #494949;
+}
+
+footer .footer-all .footer-area a:hover {
+  color: #494949;
+}
+
+footer .footer-all .footer-area a:active {
+  color: #494949;
+}
+
+footer .footer-all .footer-area ul {
+  padding: 0px;
+}
+
+footer .footer-all .footer-area ul li {
+  list-style-type: none;
+  line-height: 28px;
+}
+
+footer .footer-container {
+  padding-bottom: 6.1875rem;
+}
+
+footer .footer-container .footer-profiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2.1875rem 0 2.875rem;
+}
+
+footer .footer-container .footer-profiles ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+footer .footer-container .footer-profiles .links_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+}
+
+footer .footer-container .footer-profiles .links_social .links_item {
+  margin-right: 15px;
+}
+
+footer .footer-container .footer-profiles .links_app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+footer .footer-container .footer-legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2.4375rem;
+  text-align: left;
+  border-top: 0.0625rem solid #d6d6d6;
+}
+
+footer .footer-container .footer-legal ul {
+  list-style-type: none;
+  height: 50px;
+}
+
+footer .footer-container .footer-legal .legal-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0px;
+  width: 50%;
+  margin: 0px;
+}
+
+footer .footer-container .footer-legal .legal-ul .legal-li {
+  margin-top: 5px;
+  margin-right: 50px;
+}
+
+footer .footer-container .footer-legal .legal-ul .legal-li a:link {
+  color: #494949;
+  text-decoration: none;
+}
+
+footer .footer-container .footer-legal .legal-ul .legal-li a:visited {
+  color: #494949;
+}
+
+footer .footer-container .footer-legal .legal-ul .legal-li a:hover {
+  color: #494949;
+}
+
+footer .footer-container .footer-legal .legal-ul .legal-li a:active {
+  color: #494949;
+}
+
+footer .footer-container .footer-legal .footer-final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 50%;
+}
+
+footer .footer-container .footer-legal .footer-final span {
+  margin-top: 5px;
+}
+
+footer .footer-container .footer-legal .footer-final .footer-final-icon {
+  width: 1.75rem;
+}
+
+footer .footer-container .footer-legal .footer-final .footer-final-icon img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

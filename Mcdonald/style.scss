@@ -148,13 +148,13 @@ $letter: #494949;
     width: 100%;
     margin-bottom: 50px;
 
-    @include mobile(){
+    @include mobile() {
         margin-bottom: 75px;
     }
-    @include pad(){
+    @include pad() {
         margin-bottom: 75px;
     }
-    @include web(){
+    @include web() {
         margin-bottom: 75px;
     }
 
@@ -204,8 +204,8 @@ $letter: #494949;
     height: auto;
     border: 1px solid #d6d6d6;
     border-radius: 3px;
-    padding-bottom: 25px;
-    box-shadow: 0 0.09375rem 0.09375rem 0 rgb(0 0 0 / 8%);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 
     @include mobile() {
         width: 370px;
@@ -322,5 +322,113 @@ span {
     }
     @include web() {
         font-size: 16px;
+    }
+}
+
+footer {
+    width: 80%;
+    margin: 0 10%;
+    .footer-all {
+        display: flex;
+        .footer-area {
+            width: 100%;
+            justify-content: space-between;
+            h2 {
+                font-size: 16px;
+            }
+
+            a:link {
+                color: $letter;
+                text-decoration: none;
+            }
+            a:visited {
+                color: $letter;
+            }
+            a:hover {
+                color: $letter;
+            }
+            a:active {
+                color: $letter;
+            }
+
+            ul {
+                padding: 0px;
+                li {
+                    list-style-type: none;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    .footer-container {
+        padding-bottom: 6.1875rem;
+        .footer-profiles {
+            display: flex;
+            margin: 2.1875rem 0 2.875rem;
+            ul {
+                list-style-type: none;
+                padding-left: 0px;
+            }
+            .links_social {
+                display: flex;
+                width: 60%;
+                .links_item {
+                    margin-right: 15px;
+                }
+            }
+            .links_app {
+                display: flex;
+                width: 40%;
+                justify-content: end;
+            }
+        }
+
+        .footer-legal {
+            display: flex;
+            padding-top: 2.4375rem;
+            text-align: left;
+            border-top: 0.0625rem solid #d6d6d6;
+            ul {
+                list-style-type: none;
+                height: 50px;
+            }
+            .legal-ul {
+                display: flex;
+                padding-left: 0px;
+                width: 50%;
+                margin: 0px;
+                .legal-li {
+                    margin-top: 5px;
+                    margin-right: 50px;
+                    a:link {
+                        color: $letter;
+                        text-decoration: none;
+                    }
+                    a:visited {
+                        color: $letter;
+                    }
+                    a:hover {
+                        color: $letter;
+                    }
+                    a:active {
+                        color: $letter;
+                    }
+                }
+            }
+            .footer-final {
+                display: flex;
+                justify-content: end;
+                width: 50%;
+                span{
+                    margin-top: 5px;
+                }
+                .footer-final-icon{
+                    width: 1.75rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
