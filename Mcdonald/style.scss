@@ -1,5 +1,11 @@
 $letter: #494949;
 
+@mixin forfooter {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (min-width: 768px) and (max-width: 991px) {
         @content;
@@ -325,9 +331,20 @@ span {
     }
 }
 
-footer {
+// ------------------------Footer------------------------
+
+.footer_desktop {
     width: 80%;
     margin: 0 10%;
+    display: block;
+
+    @include forfooter() {
+        display: none;
+    }
+    @include mobile() {
+        display: none;
+    }
+
     .footer-all {
         display: flex;
         .footer-area {
@@ -419,13 +436,203 @@ footer {
                 display: flex;
                 justify-content: end;
                 width: 50%;
-                span{
+                span {
                     margin-top: 5px;
                 }
-                .footer-final-icon{
+                .footer-final-icon {
                     width: 1.75rem;
-                    img{
+                    img {
                         width: 100%;
+                    }
+                }
+            }
+
+            @include pad() {
+                display: block;
+                .legal-ul {
+                    width: 100%;
+                }
+                .footer-final {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.footer_mobile {
+    margin-top: 60px;
+    display: none;
+
+    @include forfooter() {
+        display: block;
+    }
+    @include mobile() {
+        display: block;
+    }
+
+    .footer-all {
+        .footer-area {
+            width: 100%;
+            justify-content: space-between;
+
+            @include mobile() {
+                width: 90%;
+                padding: 0 5%;
+            }
+            .title {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            h2 {
+                font-size: 18px;
+                line-height: 40px;
+                font-weight: 500;
+            }
+
+            a:link {
+                color: $letter;
+                text-decoration: none;
+            }
+            a:visited {
+                color: $letter;
+            }
+            a:hover {
+                color: $letter;
+            }
+            a:active {
+                color: $letter;
+            }
+
+            ul {
+                padding: 0px;
+                li {
+                    list-style-type: none;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    .footer-container {
+        padding: 0 5% 6.1875rem 5%;
+        width: auto;
+        @include forfooter(){
+            padding-bottom: 0px;
+        }
+        
+        .footer-profiles {
+            display: flex;
+            margin: 2.1875rem 0 2.875rem;
+
+            ul {
+                list-style-type: none;
+                padding-left: 0px;
+            }
+            .links_social {
+                display: flex;
+                width: 50%;
+                .links_item {
+                    margin-right: 15px;
+                }
+            }
+            .links_app {
+                display: flex;
+                width: 50%;
+                justify-content: end;
+            }
+
+            @include forfooter() {
+                display: block;
+                margin: 0px;
+                .links_social {
+                    width: 100%;
+                    justify-content: center;
+                    margin-top: 40px;
+                }
+                .links_app {
+                    width: 100%;
+                    justify-content: center;
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        .footer-legal {
+            display: flex;
+            padding-top: 2.4375rem;
+            text-align: left;
+            border-top: 0.0625rem solid #d6d6d6;
+            .legal-ul {
+                display: flex;
+                padding-left: 0px;
+                width: 50%;
+                list-style-type: none;
+                height: 50px;
+                margin: 0px;
+                .legal-li {
+                    margin-top: 5px;
+                    margin-right: 50px;
+                    a:link {
+                        color: $letter;
+                        text-decoration: none;
+                    }
+                    a:visited {
+                        color: $letter;
+                    }
+                    a:hover {
+                        color: $letter;
+                    }
+                    a:active {
+                        color: $letter;
+                    }
+                }
+            }
+            .footer-final {
+                display: flex;
+                justify-content: end;
+                width: 50%;
+                span {
+                    margin-top: 5px;
+                }
+                .footer-final-icon {
+                    width: 1.75rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            @include mobile() {
+                display: block;
+                .legal-ul {
+                    width: 100%;
+                }
+                .footer-final {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            @include forfooter() {
+                display: block;
+                padding-top: 0;
+                .legal-ul {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    .legal-li {
+                        font-size: 12px;
+                        margin: 24px 0;
+                    }
+                }
+                .footer-final {
+                    width: 100%;
+                    justify-content: center;
+                    margin: 24px 0;
+                    span {
+                        font-size: 12px;
                     }
                 }
             }
