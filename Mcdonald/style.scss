@@ -150,23 +150,30 @@ $letter: #494949;
     }
 }
 
-.wall {
+.wall_mobile {
     width: 100%;
     margin-bottom: 50px;
+    text-align: left;
+    font-size: 16px;
+    color: #292929;
+    height: auto;
+    border: 0.0625rem solid #d6d6d6;
+    border-radius: 0 0 0.25rem 0.25rem;
 
     @include mobile() {
-        margin-bottom: 75px;
+        display: none;
     }
     @include pad() {
-        margin-bottom: 75px;
+        display: none;
     }
     @include web() {
-        margin-bottom: 75px;
+        display: none;
     }
 
     .wallpage {
         height: auto;
         border-radius: 3px;
+        position: relative;
         @include web() {
             text-align: center;
             width: auto;
@@ -183,7 +190,196 @@ $letter: #494949;
             }
         }
     }
+    .wallpage_text {
+        position: relative;
+        width: auto;
+        text-align: left;
+        padding: 1.125rem 1.25rem 10px;
+        word-wrap: break-word;
+        overflow: hidden;
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .wallpage_button {
+            width: 100%;
+            .wallpage_button_detail {
+                display: inline-block;
+                vertical-align: middle;
+                width: 7rem;
+                background-color: #ffbc0d;
+                line-height: 2.25rem;
+                border: 0.125rem solid #ffbc0d;
+                padding: 0.25rem 0.625rem;
+                cursor: pointer;
+                border-radius: 4px;
+                text-align: center;
+                margin: 14px 29px 21px 0px;
+            }
+        }
+        .wallpage_playicon {
+            display: flex;
+            width: auto;
+            .grey_point {
+                width: 20px;
+                span {
+                    font-size: 10px;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+            }
+            .black_point {
+                width: 20px;
+                span {
+                    font-size: 10px;
+                    vertical-align: middle;
+                    text-align: center;
+                }
+            }
+            .play_icon {
+                width: 20px;
+                span {
+                    font-size: 20px;
+                    vertical-align: middle;
+                    text-align: center;
+                    border-left: 2px solid #898989;
+                    border-radius: 1px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
 }
+
+.wall {
+    position: relative;
+    
+    font-size: 16px;
+    color: #292929;
+    height: auto;
+    border-radius: 0 0 0.25rem 0.25rem;
+    width: 100%;
+    height: 334px;
+    margin-bottom: 75px;
+
+    @include forfooter() {
+        display: none;
+    }
+    @include pad() {
+        height: 432px;
+    }
+    @include web() {
+        height: 520px;
+        padding-left: 13px;
+    }
+
+    .wallpage {
+        height: auto;
+        border-radius: 3px;
+        position: absolute;
+        @include web() {
+            text-align: center;
+            width: auto;
+            height: auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            @include web() {
+                width: auto;
+                max-height: 520px;
+            }
+        }
+    }
+    .wallpage_text {
+        width: 18rem;
+        margin: 0 3.125rem 2rem;
+        border-radius: 0.25rem;
+        background-color: #fff;
+        text-align: left;
+        padding: 1.3125rem 5rem 1rem 1.8125rem;
+        word-wrap: break-word;
+        overflow: hidden;
+        position: absolute;
+        border: 0;
+        h2 {
+            font-size: 28px;
+            font-weight: 500;
+            @include web(){
+                font-size: 32px;
+            }
+        }
+
+        @include pad() {
+            left: 0px;
+            bottom: 0px;
+        }
+
+        @include web() {
+            width: 20rem;
+            left: 0px;
+            bottom: 0px;
+            margin: 0 2rem 4rem 4rem;
+            padding: 1.3125rem 2rem 1rem 1.8125rem;
+        }
+
+        .wallpage_button {
+            width: 100%;
+            .wallpage_button_detail {
+                display: inline-block;
+                vertical-align: middle;
+                width: 7rem;
+                background-color: #ffbc0d;
+                line-height: 2.25rem;
+                border: 0.125rem solid #ffbc0d;
+                padding: 0.25rem 0.625rem;
+                cursor: pointer;
+                border-radius: 4px;
+                text-align: center;
+                margin: 14px 29px 21px 0px;
+            }
+        }
+        .wallpage_playicon {
+            display: flex;
+            width: auto;
+            vertical-align: middle;
+            text-align: center;
+            .grey_point {
+                width: auto;
+                span {
+                    font-size: 10px;
+                    padding: 0.625rem;
+                }
+            }
+            .black_point {
+                width: auto;
+                span {
+                    font-size: 10px;
+                    padding: 0.625rem;
+                }
+            }
+            .play_line {
+                width: auto;
+
+                font-size: 20px;
+                border-left: 2px solid #898989;
+                border-radius: 1px;
+                padding: 10px 0px 10px 10px;
+            }
+            .play_icon {
+                width: auto;
+                span {
+                    font-size: 20px;
+                    border-radius: 1px;
+                    padding-top: 6px;
+                }
+            }
+        }
+    }
+}
+
 .card-area {
     width: 100%;
     height: auto;
@@ -518,10 +714,10 @@ span {
     .footer-container {
         padding: 0 5% 6.1875rem 5%;
         width: auto;
-        @include forfooter(){
+        @include forfooter() {
             padding-bottom: 0px;
         }
-        
+
         .footer-profiles {
             display: flex;
             margin: 2.1875rem 0 2.875rem;
